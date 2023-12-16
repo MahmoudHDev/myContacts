@@ -40,7 +40,6 @@ function App() {
     <div className="App">
       <h1>Contacts</h1>
       <button onClick={apiCall} className='btn btn-danger'>show users</button>
-      <button >Remove users</button>
       {userObject.map(createContacts)}
     </div>
   );
