@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Contacts from './Contacts.js';
+import Contacts from './Contacts.jsx';
 import React, { useState } from "react";
 
 const expURL = "http://localhost:9000/";
@@ -38,9 +38,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Contacts</h1>
-      <button onClick={apiCall} className='btn btn-danger'>show users</button>
-      {userObject.map(createContacts)}
+      <div className='text-center'>
+        <button onClick={apiCall} className='btn btn-danger'>Show Contacts</button>
+      </div>
+      <div className='row row-cols-1 row-cols-md-2 g-4' >
+        {userObject.map(createContacts)}
+      </div>
+
     </div>
   );
 };
